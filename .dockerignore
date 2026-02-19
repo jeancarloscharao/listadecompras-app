@@ -1,0 +1,12 @@
+node_modules
+.angular
+.ionic
+www
+dist
+capacitor.config.ts
+ionic.config.json
+.git
+.dockerignore
+Dockerfile
+docker-compose.yml
+nodedata

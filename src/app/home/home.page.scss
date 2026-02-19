@@ -1,0 +1,76 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: var(--ion-color-medium);
+
+  ion-icon {
+    font-size: 80px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+.shopping-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 72px;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ion-color-step-600);
+  }
+
+  ion-checkbox {
+    --size: 28px;
+    --checkbox-background-checked: var(--ion-color-success);
+    --border-width: 2px;
+  }
+}
+
+ion-badge {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+ion-segment {
+  --background: var(--ion-color-primary-shade);
+  padding: 4px;
+  margin-bottom: 8px;
+
+  ion-segment-button {
+    --indicator-color: var(--ion-color-light);
+    --color: var(--ion-color-light-shade);
+    --color-checked: var(--ion-color-primary);
+    min-height: 48px;
+
+    ion-label {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+ion-fab {
+  margin-bottom: 24px;
+}
+
+ion-fab-button {
+  --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}

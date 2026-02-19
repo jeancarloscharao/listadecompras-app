@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8100:8100"
+    volumes:
+      - .:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Useful for live-reload in docker
+    stdin_open: true
+    tty: true

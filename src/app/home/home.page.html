@@ -1,0 +1,65 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Dona de Casa
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="clearCompleted()" *ngIf="currentSegment() === 'cart'">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+      <ion-badge color="light" class="ion-margin-end">
+        {{ pendingCount() }} pendentes
+      </ion-badge>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary">
+    <ion-segment [value]="currentSegment()" (ionChange)="segmentChanged($event)" mode="md">
+      <ion-segment-button value="missing">
+        <ion-label>Faltando</ion-label>
+        <ion-icon name="list"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="cart">
+        <ion-label>Carrinho</ion-label>
+        <ion-icon name="cart"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-top">
+
+  <div class="empty-state" *ngIf="filteredItems().length === 0">
+    <ion-icon [name]="currentSegment() === 'missing' ? 'list' : 'checkmark-done'"></ion-icon>
+    <p>{{ currentSegment() === 'missing' ? 'Lista vazia' : 'Carrinho vazio' }}</p>
+  </div>
+
+  <ion-list lines="full">
+    <ion-reorder-group [disabled]="currentSegment() === 'cart'" (ionItemReorder)="handleReorder($event)">
+
+      <ion-item-sliding *ngFor="let item of filteredItems(); trackBy: trackItems" #slidingItem>
+        <ion-item class="shopping-item">
+          <ion-checkbox slot="start" [checked]="item.comprado" (ionChange)="toggleStatus(item.id)"></ion-checkbox>
+          <ion-label>
+            <h2>{{ item.nome }}</h2>
+            <p>{{ item.categoria }} • Qtd: {{ item.quantidade }}</p>
+          </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="removeItem(item.id)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-reorder-group>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addItem()" color="secondary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

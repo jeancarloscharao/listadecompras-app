@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Voltar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Item</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="save()" [disabled]="!nome().trim()">
+        <ion-icon name="save-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines="full" class="ion-margin-bottom">
+    <ion-item class="input-item">
+      <ion-label position="stacked">O que você precisa comprar?</ion-label>
+      <ion-input placeholder="Ex: Arroz, Feijão..." [ngModel]="nome()" (ngModelChange)="nome.set($event)"
+        autofocus="true" clear-input="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="stacked">Quantidade</ion-label>
+      <ion-input type="number" [ngModel]="quantidade()" (ngModelChange)="quantidade.set($event)"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="stacked">Categoria</ion-label>
+      <ion-select [ngModel]="categoria()" (ngModelChange)="categoria.set($event)" okText="Confirmar"
+        cancelText="Cancelar">
+        <ion-select-option *ngFor="let cat of categorias" [value]="cat">
+          {{ cat }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding-horizontal">
+    <ion-button expand="block" color="secondary" size="large" (click)="save()" [disabled]="!nome().trim()">
+      <ion-icon name="save-outline" slot="start"></ion-icon>
+      Adicionar à Lista
+    </ion-button>
+
+    <ion-button expand="block" fill="clear" color="medium" (click)='cancel()'>
+      Cancelar
+    </ion-button>
+  </div>
+</ion-content>
