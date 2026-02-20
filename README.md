@@ -2,6 +2,11 @@
 
 Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o gerenciamento de compras de supermercado. O foco é a eficiência e a legibilidade em ambientes reais de compras.
 
+<p align="center">
+  <img src="./src/assets/screenshots/screenshot_faltando.png" width="300" alt="Lista de Compras - Faltando">
+  <img src="./src/assets/screenshots/screenshot_carrinho.png" width="300" alt="Lista de Compras - Carrinho">
+</p>
+
 
 ## ✨ Funcionalidades
 
