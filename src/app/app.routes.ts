@@ -12,6 +12,10 @@ export const routes: Routes = [
   },
   {
     path: 'add-item',
-    loadComponent: () => import('./add-item/add-item.page').then( m => m.AddItemPage)
+    loadComponent: () => import('./add-item/add-item.page').then(m => m.AddItemPage)
+  },
+  {
+    path: 'edit-item/:id',
+    loadComponent: () => import('./add-item/add-item.page').then(m => m.AddItemPage)
   },
 ];

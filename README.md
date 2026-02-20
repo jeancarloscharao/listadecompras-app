@@ -1,10 +1,11 @@
-# 🛒 Dona de Casa - App de Compras Domésticas
+# 🛒 Lista de Compras - App de Compras Domésticas
 
 Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o gerenciamento de compras de supermercado. O foco é a eficiência e a legibilidade em ambientes reais de compras.
 
 ## ✨ Funcionalidades
 
 - **Gerenciamento de Itens**: Adicione itens com nome, quantidade e categoria.
+- **Edição de Itens**: Corrija itens rapidamente deslizando para o lado.
 - **Segmentação Inteligente**: Visualize o que está faltando e o que já está no carrinho separadamente.
 - **Alta Visibilidade**: Design de alto contraste otimizado para ambientes com iluminação variável (supermercados).
 - **Reordenar Itens**: Organize sua lista conforme o corredor do mercado usando gestos de arrastar.
@@ -15,7 +16,7 @@ Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o
 ## 🚀 Tecnologias Utilizadas
 
 - **Ionic 8**: Framework UI para aplicativos cross-platform.
-- **Angular 19 (Standalone Components)**: Otimização e performance moderna.
+- **Angular 20 (Standalone Components)**: Otimização e performance moderna.
 - **Angular Signals**: Gerenciamento de estado reativo e eficiente.
 - **Capacitor 8**: Ponte nativa para rodar no Android/iOS.
 - **Docker**: Ambiente de desenvolvimento isolado e replicável.
@@ -28,8 +29,8 @@ Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o
 ### Rodando o Ambiente de Desenvolvimento
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/donadecasa-app.git
-   cd donadecasa-app
+   git clone https://github.com/seu-usuario/lista-de-compras-app.git
+   cd lista-de-compras-app
    ```
 
 2. Suba o container Docker:
@@ -62,4 +63,4 @@ Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-Desenvolvido com ❤️ por Jean
+Desenvolvido por Jean

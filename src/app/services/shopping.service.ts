@@ -5,7 +5,7 @@ import { ShoppingItem } from '../models/shopping.model';
     providedIn: 'root'
 })
 export class ShoppingService {
-    private readonly STORAGE_KEY = 'donadecasa_shopping_items';
+    private readonly STORAGE_KEY = 'listadecompras_shopping_items';
 
     // Signal to store the list of items
     private itemsSignal = signal<ShoppingItem[]>(this.loadFromStorage());
@@ -64,6 +64,16 @@ export class ShoppingService {
             items.map(item =>
                 item.id === id ? { ...item, comprado: !item.comprado } : item
             )
+        );
+    }
+
+    getItemById(id: string): ShoppingItem | undefined {
+        return this.itemsSignal().find(item => item.id === id);
+    }
+
+    updateItem(updatedItem: ShoppingItem) {
+        this.itemsSignal.update(items =>
+            items.map(item => item.id === updatedItem.id ? updatedItem : item)
         );
     }
 

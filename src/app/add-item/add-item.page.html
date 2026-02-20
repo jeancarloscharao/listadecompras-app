@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home" text="Voltar"></ion-back-button>
     </ion-buttons>
-    <ion-title>Novo Item</ion-title>
+    <ion-title>{{ isEditing() ? 'Editar Item' : 'Novo Item' }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="save()" [disabled]="!nome().trim()">
         <ion-icon name="save-outline" slot="icon-only"></ion-icon>
@@ -15,9 +15,9 @@
 <ion-content class="ion-padding">
   <ion-list lines="full" class="ion-margin-bottom">
     <ion-item class="input-item">
-      <ion-label position="stacked">O que você precisa comprar?</ion-label>
-      <ion-input placeholder="Ex: Arroz, Feijão..." [ngModel]="nome()" (ngModelChange)="nome.set($event)"
-        autofocus="true" clear-input="true"></ion-input>
+      <ion-label position="stacked">{{ isEditing() ? 'Nome do item' : 'O que você precisa comprar?' }}</ion-label>
+      <ion-input [placeholder]="isEditing() ? '' : 'Ex: Arroz, Feijão...'" [ngModel]="nome()"
+        (ngModelChange)="nome.set($event)" autofocus="true" clear-input="true"></ion-input>
     </ion-item>
 
     <ion-item class="input-item">
@@ -39,7 +39,7 @@
   <div class="ion-padding-horizontal">
     <ion-button expand="block" color="secondary" size="large" (click)="save()" [disabled]="!nome().trim()">
       <ion-icon name="save-outline" slot="start"></ion-icon>
-      Adicionar à Lista
+      {{ isEditing() ? 'Salvar Alterações' : 'Adicionar à Lista' }}
     </ion-button>
 
     <ion-button expand="block" fill="clear" color="medium" (click)='cancel()'>

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ShoppingService } from '../services/shopping.service';
 import { addIcons } from 'ionicons';
-import { trash, add, list, cart, chevronForward, checkmarkDone } from 'ionicons/icons';
+import { trash, add, list, cart, chevronForward, checkmarkDone, pencil } from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
@@ -47,7 +47,7 @@ export class HomePage {
   });
 
   constructor() {
-    addIcons({ trash, add, list, cart, chevronForward, checkmarkDone });
+    addIcons({ trash, add, list, cart, chevronForward, checkmarkDone, pencil });
   }
 
   segmentChanged(event: any) {
@@ -56,6 +56,11 @@ export class HomePage {
 
   addItem() {
     this.router.navigate(['/add-item']);
+  }
+
+  editItem(id: string, slidingItem: any) {
+    slidingItem.close();
+    this.router.navigate(['/edit-item', id]);
   }
 
   toggleStatus(id: string) {

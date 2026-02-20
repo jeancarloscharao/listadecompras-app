@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">donadecasa</string>
-    <string name="title_activity_main">donadecasa</string>
-    <string name="package_name">io.ionic.donadecasa</string>
-    <string name="custom_url_scheme">io.ionic.donadecasa</string>
+    <string name="app_name">Lista de Compras</string>
+    <string name="title_activity_main">Lista de Compras</string>
+    <string name="package_name">io.ionic.listadecompras</string>
+    <string name="custom_url_scheme">io.ionic.listadecompras</string>
 </resources>

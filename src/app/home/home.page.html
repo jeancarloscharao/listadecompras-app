@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar color="primary">
     <ion-title>
-      Dona de Casa
+      Lista de Compras
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="clearCompleted()" *ngIf="currentSegment() === 'cart'">
@@ -48,6 +48,9 @@
         </ion-item>
 
         <ion-item-options side="end">
+          <ion-item-option color="primary" (click)="editItem(item.id, slidingItem)">
+            <ion-icon slot="icon-only" name="pencil"></ion-icon>
+          </ion-item-option>
           <ion-item-option color="danger" (click)="removeItem(item.id)">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-item-option>
