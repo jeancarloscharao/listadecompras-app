@@ -2,6 +2,7 @@
 
 Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o gerenciamento de compras de supermercado. O foco é a eficiência e a legibilidade em ambientes reais de compras.
 
+
 ## ✨ Funcionalidades
 
 - **Gerenciamento de Itens**: Adicione itens com nome, quantidade e categoria.
@@ -20,6 +21,9 @@ Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o
 - **Angular Signals**: Gerenciamento de estado reativo e eficiente.
 - **Capacitor 8**: Ponte nativa para rodar no Android/iOS.
 - **Docker**: Ambiente de desenvolvimento isolado e replicável.
+
+---
+📥 **Download do APK (v1.1.0):** [Clique aqui para baixar](https://github.com/jeancarloscharao/listadecompras-app/releases/tag/v1.1.0)
 
 ## 🛠️ Como Executar
 
@@ -63,4 +67,4 @@ Um aplicativo moderno, rápido e de alto contraste desenvolvido para facilitar o
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-Desenvolvido por Jean
+Desenvolvido por [Jean Carlos Charão Sabino](https://jeancarlos.com.br/)
